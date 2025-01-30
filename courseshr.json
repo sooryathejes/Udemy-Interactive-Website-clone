@@ -1,0 +1,55 @@
+[
+    {
+        "img" : "https://img-c.udemycdn.com/course/240x135/2776760_f176_10.jpg",
+        "course":"100 Days of Code: The Complete Python Pro Bootcamp",
+        "instructor":"Dr. Angela Yu, Developer and Lead Instructor",
+        "rating":"4.7",
+        "stars":"*****",
+        "reviews":"(384,713)",
+        "time":"56.5 total hours",
+        "lectures":"592 lectures",
+        "levels":"All levels",
+        "price":"₹499",
+        "tags":"Bestseller"
+    },
+    {
+        "img" : "https://img-c.udemycdn.com/course/240x135/567828_67d0.jpg",
+        "course":"The Complete Python Bootcamp From Zero to Hero in Python",
+        "instructor":"Jose Portilla, Pierian Training",
+        "rating":"4.6",
+        "stars":"*****",
+        "reviews":"(527,971)",
+        "time":"22 total hours",
+        "lectures":"156 lectures",
+        "levels":"All levels",
+        "price":"₹449",
+        "tags":"Bestseller"
+    },
+    {
+        "img" : "https://img-c.udemycdn.com/course/240x135/4398404_2f8f_2.jpg",
+        "course":"Learn Python Programming - Beginner to Master",
+        "instructor":"Abdul Bari",
+        "rating":"4.6",
+        "stars":"*****",
+        "reviews":"(7,288)",
+        "time":"57 total hours",
+        "lectures":"352 lectures",
+        "levels":"All levels",
+        "price":"₹449",
+        "tags":"Bestseller"
+    },
+    {
+        "img" : "ttps://img-c.udemycdn.com/course/240x135/4398404_2f8f_2.jpg",
+        "course":"Learn Python Programming - Beginner to Master",
+        "instructor":"Abdul Bar",
+        "rating":"4.6",
+        "stars":"*****",
+        "reviews":"(7,288)",
+        "time":"57 total hours",
+        "lectures":"352 lectures",
+        "levels":"All levels",
+        "price":"₹449",
+        "tags":"Bestseller"
+    }
+      
+]

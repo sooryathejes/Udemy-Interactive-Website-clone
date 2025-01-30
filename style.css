@@ -24,6 +24,9 @@ html {
   src: url(./font/SuisseWorks-Bold-v1.woff2);
 }
 
+main{
+  overflow-x: none;
+}
 .ad_main {
   display: flex;
   justify-content: space-between;
@@ -90,8 +93,118 @@ html {
   height: 11px;
   color: rgb(48, 49, 65);
 }
+/* ------------sidebar----------- */
+.sidebar_menu{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  left: -320px;
+  background: rgba(0, 0, 0, 0.279);
+  justify-content: space-between;
 
-header {
+}
+.sidebar_menu_inner{
+  width: 85%;
+  background: white;
+  z-index: 1000;
+}
+.active{
+  left: 0;
+  transition: 0.3s ease-in-out;
+}
+.sidebar_menu_close_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+  padding: 0px 12px;
+  margin: 10px;
+  background: white;
+  border-radius: 100px;
+}
+.sidebar_menu_profile{
+  display: flex;
+  padding: 16px;
+  margin: 0px -4px;
+  color: rgb(48, 49, 65);
+  background: rgb(246, 247, 249);
+}
+.profile_dp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 13.333px;
+  font-family: U-bold;
+  background: black;
+  width: 64px;
+  height: 64px;
+  border-radius: 100px;
+}
+.profile_details{
+  display: flex;
+  flex-direction: column;
+  margin: 0px 8px 0px 16px;
+  justify-content: center;
+}
+
+.profile_details h2{
+  margin: 0;
+  font-family: U-bold;
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 19.2px;
+}
+.profile_list_btn{
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+.profile_details p{
+  font-size: 14px;
+  font-family: U-reg;
+  line-height: 22.4px;
+  color: rgb(89, 92, 115);
+}
+/* --------filter-bar------- */
+.filter_bar{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: end;
+  width: 100%;
+  background: white;
+  height: 100dvh;
+  position: absolute;
+  z-index: 1000;
+  left: 320px;
+  top:0;
+}
+.filter_bar_inner{
+  left: 0;
+  width: 85%;
+  background: black;
+}
+.show{
+  left: 0;
+  transition: 0.3s ease-in-out;
+}
+.filter_menu_close_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+  padding: 0px 12px;
+  margin: 10px; 
+  background: white;
+  border-radius: 100px;
+}
+/* ---------header---------------- */
+header { 
   display: flex;
   justify-content: space-between;
   padding: 4px 0px;
@@ -102,7 +215,6 @@ header {
   box-shadow: 0 2px 4px rgba(6, 17, 118, 0.08),
     0 4px 12px rgba(6, 17, 118, 0.08);
 }
-
 .menu_btn {
   height: 48px;
   padding: 0px 12px 0px 12px;
@@ -111,7 +223,6 @@ header {
   display: flex;
   align-items: center;
 }
-
 .spacer {
   width: 48px;
   height: 48px;
@@ -224,9 +335,13 @@ header {
 
 .courses_lists {
   display: flex;
-  padding-bottom: 16px;
+  padding: 16px 0px;
   gap: 8px;
   width: 100%;
+  border-bottom: 1px solid rgb(209, 210, 224);
+}
+.courses_lists:nth-child(1) {
+  padding: 0px 0px 16px 0px;
 }
 .course_img {
   position: relative;
@@ -306,7 +421,7 @@ header {
   flex-wrap: wrap;
   font-size: 12px;
   font-family: U-reg;
-  line-height: 15.8px;
+  line-height: 16.8px;
   color: rgb(89, 92, 115);
 }
 
@@ -318,8 +433,9 @@ header {
 }
 
 .price {
+  position: relative;
   padding: 4px 0px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-size: 16px;
   font-family: U-bold;
   line-height: 22.4px;
@@ -327,6 +443,7 @@ header {
 }
 
 .seller_tags {
+  position: relative;
   font-family: U-bold;
   margin: 8px 0px 4px 0px;
   padding: 4px 8px;
