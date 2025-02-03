@@ -2,15 +2,17 @@
     {
         "img" : "https://img-c.udemycdn.com/course/240x135/2776760_f176_10.jpg",
         "course":"100 Days of Code: The Complete Python Pro Bootcamp",
+        "courseDiscription":"Master <strong>Python</strong>  by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
         "instructor":"Dr. Angela Yu, Developer and Lead Instructor",
-        "rating":"4.7",
+        "rating":"2.7",
         "stars":"*****",
         "reviews":"(384,713)",
         "time":"56.5 total hours",
         "lectures":"592 lectures",
         "levels":"All levels",
-        "price":"₹499",
-        "tags":"Bestseller"
+        "price":"499",
+        "language":"Spanish"
+
     },
     {
         "img" : "https://img-c.udemycdn.com/course/240x135/567828_67d0.jpg",
@@ -22,8 +24,9 @@
         "time":"22 total hours",
         "lectures":"156 lectures",
         "levels":"All levels",
-        "price":"₹449",
-        "tags":"Bestseller"
+        "price":"449",
+        "language":"English"
+        
     },
     {
         "img" : "https://img-c.udemycdn.com/course/240x135/4398404_2f8f_2.jpg",
@@ -35,8 +38,9 @@
         "time":"57 total hours",
         "lectures":"352 lectures",
         "levels":"All levels",
-        "price":"₹449",
-        "tags":"Bestseller"
+        "price":"849",
+        "language":"English"
+
     },
     {
         "img" : "https://img-c.udemycdn.com/course/240x135/6120747_5232_2.jpg",
@@ -48,8 +52,9 @@
         "time":"61 total hours",
         "lectures":"258 lectures",
         "levels":"All levels",
-        "price":"₹449",
-        "tags":"Bestseller"
+        "price":"449",
+        "language":"English"
+
     },
     {
         "img" : "https://img-c.udemycdn.com/course/240x135/692188_9da7_34.jpg",
@@ -61,8 +66,9 @@
         "time":"52.5 total hours",
         "lectures":"459 lectures",
         "levels":"All levels",
-        "price":"₹699",
-        "tags":"Bestseller"
+        "price":"699",
+        "language":"Spanish"
+
     },
     {
         "img" : "https://img-c.udemycdn.com/course/240x135/2473048_8255_5.jpg",
@@ -74,8 +80,9 @@
         "time":"31 total hours",
         "lectures":"345 lectures",
         "levels":"Beginner",
-        "price":"₹599",
-        "tags":"Bestseller"
+        "price":"599",
+        "language":"French"
+
     },
     {
         "img" : "https://img-c.udemycdn.com/course/240x135/836376_8b97_4.jpg",
@@ -87,46 +94,50 @@
         "time":"4.5 total hours",
         "lectures":"112 lectures",
         "levels":"Beginner",
-        "price":"₹599",
-        "tags":"Bestseller"
+        "price":"599",
+        "language":"Spanish"
+
     },
     {
         "img" : "https://img-c.udemycdn.com/course/240x135/3626932_73ed_8.jpg",
         "course":"Python PCEP: Become Certified Entry-Level Python Programmer",
         "instructor":"Adrian Wiech",
-        "rating":"4.6",
+        "rating":"4.4",
         "stars":"*****",
         "reviews":"(8,071)",
         "time":"4 total hours",
         "lectures":"74 lectures",
         "levels":"Beginner",
-        "price":"₹599",
-        "tags":"Bestseller"
+        "price":"599",
+        "language":"English"
+
     },
     {
         "img" : "https://img-c.udemycdn.com/course/240x135/5414974_e415.jpg",
         "course":"[NEW] Python Bootcamp: Beginner to Master Programming",
         "instructor":"in28Minutes Official, Deb, Software Developer and Lead Instructor ",
-        "rating":"4.6",
+        "rating":"3.6",
         "stars":"*****",
         "reviews":"(1,463)",
         "time":"21.5 total hours",
         "lectures":"250 lectures",
         "levels":"All levels",
-        "price":"₹499",
-        "tags":"Bestseller"
+        "price":"499",
+        "language":"English"
+
     },
     {
         "img" : "https://img-c.udemycdn.com/course/240x135/903744_8eb2.jpg",
         "course":"Python for Data Science and Machine Learning Bootcamp",
         "instructor":"Jose Portilla, Pierian Training",
-        "rating":"4.6",
+        "rating":"3.1",
         "stars":"*****",
         "reviews":"(148,713)",
         "time":"25 total hours",
         "lectures":"165 lectures",
         "levels":"Beginner",
-        "price":"₹699",
-        "tags":"Bestseller"
+        "price":"699",
+        "language":"English"
     }
+
 ]
