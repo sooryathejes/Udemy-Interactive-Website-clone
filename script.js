@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     let menuBtn = document.querySelector(".menu_btn");
     let filterBtn = document.querySelector(".filter_section");
-
     let sideBar = document.querySelector('.sidebar_menu');
     let filterBar = document.querySelector('.filter_bar');
     let closeBtn = document.querySelector('.sidebar_menu_close_btn');
@@ -11,41 +10,131 @@ document.addEventListener('DOMContentLoaded', () => {
     let ratingList = document.querySelector('.rating_lists')
     let languageLists = document.querySelector('.language_lists')
     let notificationIcon = document.querySelector('.header_tab_notification');
+    let cartIcon = document.querySelector('.header_tab_cart')
     let wishlistIcon = document.querySelector('.header_tab_wishlist');
     let teach = document.querySelector('.header_tab_teach');
+    let learn = document.querySelector('.header_tab_mylearning')
     let bussiness = document.querySelector('.header_tab_bussiness');
     let bussiness_dropdown = document.querySelector('.bussiness_dropdown')
     let teach_dropdown = document.querySelector('.teach_dropdown')
+    let learning_dropdown = document.querySelector('.learning_dropdown')
+    let wishlistDropdown = document.querySelector('.wishlist_dropdown')
+    let cartDropdown = document.querySelector('.cart_dropdown')
+    let notificationDropdown = document.querySelector('.notification_dropdown')
+    let profile = document.querySelector('.profile_dp_tab_main')
+    let profileDropDown = document.querySelector('.profile_dropdown')
+    let CourseSection = document.querySelector('.course_section_main')
+    let filterSectionTab = document.querySelector('.filter_section_tab')
+    let explore = document.querySelector('.header_tab_explore')
+    let exploreDropdown = document.querySelector('.explore_dropdrown')
+    let sortSection = document.querySelector('.sort_section');
+    let skillLists = document.querySelectorAll('.certificates_skills_lists')
 
+
+    skillLists.forEach((list) => {
+        let skillList = list.querySelector('.certificates_skills_list');
+        let dropdown = list.querySelector('.certificates_dropdown')
+        skillList.addEventListener('click', () => {
+            dropdown.classList.toggle('certificates_drop');
+        });
     
-    teach.addEventListener('mouseover',() => {
+    })
+
+   
+
+    function ratings(courses) {
+        return courses.sort((a, b) => b.rating - a.rating);
+    }
+
+    function mostReviewed(courses) {
+        return courses.sort((a, b) =>
+            b.reviews.replace(/\D/g, "") - a.reviews.replace(/\D/g, "")
+        );
+    }
+    sortSection.addEventListener('change', function () {
+        let sortedCourses = courseData;
+
+        if (this.value === "reviews") {
+            sortedCourses = mostReviewed(sortedCourses);
+        } else if (this.value === "rating") {
+            sortedCourses = ratings(sortedCourses);
+        }
+ 
+        displayCourses(sortedCourses);
+    });
+
+
+    explore.addEventListener('mouseover', () => {
+        exploreDropdown.classList.add('explore_drop')
+    })
+    explore.addEventListener('mouseleave', () => {
+        exploreDropdown.classList.remove('explore_drop')
+    })
+    filterSectionTab.addEventListener('click', () => {
+        CourseSection.classList.toggle('course_section_full')
+    })
+    profile.addEventListener('mouseover', () => {
+        profileDropDown.classList.add('profile_drop')
+    })
+    profile.addEventListener('mouseleave', () => {
+        profileDropDown.classList.remove('profile_drop')
+    })
+    notificationIcon.addEventListener('mouseover', () => {
+        notificationDropdown.classList.add('notification_drop')
+    })
+    notificationIcon.addEventListener('mouseleave', () => {
+        notificationDropdown.classList.remove('notification_drop')
+    })
+
+    cartIcon.addEventListener('mouseover', () => {
+        cartDropdown.classList.add('cart_drop')
+    })
+    cartIcon.addEventListener('mouseleave', () => {
+        cartDropdown.classList.remove('cart_drop')
+    })
+
+    wishlistIcon.addEventListener('mouseover', () => {
+        wishlistDropdown.classList.add('learn_drop')
+    })
+    wishlistIcon.addEventListener('mouseleave', () => {
+        wishlistDropdown.classList.remove('learn_drop')
+    })
+
+    learn.addEventListener('mouseover', () => {
+        learning_dropdown.classList.add('learn_drop')
+    })
+    learn.addEventListener('mouseleave', () => {
+        learning_dropdown.classList.remove('learn_drop')
+    })
+
+    teach.addEventListener('mouseover', () => {
         teach_dropdown.classList.add('teach_drop')
     })
-    teach.addEventListener('mouseleave',() => {
+    teach.addEventListener('mouseleave', () => {
         teach_dropdown.classList.remove('teach_drop')
     })
-    bussiness.addEventListener('mouseover',() => {
+    bussiness.addEventListener('mouseover', () => {
         bussiness_dropdown.classList.add('bussiness_drop')
     })
-    bussiness.addEventListener('mouseleave',() => {
+    bussiness.addEventListener('mouseleave', () => {
         bussiness_dropdown.classList.remove('bussiness_drop')
     })
 
 
-    function bussinessShow(){
-        if(window.innerWidth >= 1081){
+    function bussinessShow() {
+        if (window.innerWidth >= 1081) {
             bussiness.style.display = "block"
-        }else{
+        } else {
             bussiness.style.display = "none"
         }
     }
     bussinessShow()
-    window.addEventListener('resize',bussinessShow)
+    window.addEventListener('resize', bussinessShow)
 
-    function teachShow(){
-        if(window.innerWidth >= 921){
+    function teachShow() {
+        if (window.innerWidth >= 921) {
             teach.style.display = "block"
-        }else{
+        } else {
             teach.style.display = "none"
         }
     }
@@ -98,6 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fltrCloseBtn.addEventListener('click', () => {
         filterBar.classList.remove("show");
     });
+
     // -----fetch------
     let courseData = [];
 
@@ -194,8 +284,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         displayCourses(filteredCourses);
         isEngFilter = !isEngFilter;
-
     }
+
     let isSpaFilter = false
     function languageSpa() {
         let filteredCourses
@@ -206,8 +296,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         displayCourses(filteredCourses);
         isSpaFilter = !isSpaFilter;
-  
-    } 
+
+    }
 
     let isFrFilter = false;
 
@@ -231,5 +321,14 @@ document.addEventListener('DOMContentLoaded', () => {
     frLang.addEventListener("click", languageFr);
 
 
+    // -----sorting-------
+    // let highestRated = document.querySelector('.highest_rated')
 
-}); 
+    // function mostReviews(courses){
+    //     return courses.sort((a,b) => parseFloat(b.rating) - parseFloat(a.rating))
+    // }
+    // highestRated.addEventListener('click',() => {
+    //         displayCourses(mostReviews(courseData))
+    // })
+
+});

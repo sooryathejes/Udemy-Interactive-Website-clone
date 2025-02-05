@@ -279,7 +279,7 @@ main {
   justify-content: end;
   width: 0;
   background: rgba(4, 4, 4, 0.335);
-  height: 100dvh;
+  height: 100vh;
   position: absolute;
   z-index: 1000;
   top: 0;
@@ -490,26 +490,28 @@ main {
 }
 
 /* -----------courses-------------- */
+
 .courses {
   padding: 32px 24px;
+  max-width: 1340px;
+  margin: 0px auto;
 }
-
-
-
-.results {
-  font-size: 18px;
+ 
+.results { 
+  font-size: 112.8%;
   font-family: U-bold;
   line-height: 21.6px;
-  color: rgb(48, 49, 65);
+  color: rgb(48, 49, 65); 
   margin-bottom: 24px;
 }
 
 .filter_sort_section {
   display: flex;
   margin-bottom: 24px;
-}
-
+} 
+ 
 .filter_section {
+  cursor: pointer;
   display: flex;
   align-items: center;
   width: 90.06px;
@@ -537,6 +539,7 @@ main {
 }
 
 .sort_section {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -853,7 +856,7 @@ footer {
   color: rgb(255, 255, 255);
   border: 1px solid rgb(255, 255, 255);
   border-radius: 4px;
-}
+} 
 
 .top_companies {
   display: flex;
@@ -866,22 +869,22 @@ footer {
 
 .top_companies_description {
   font-family: U-bold;
-  color: rgb(255, 255, 255);
+  color: rgb(222, 221, 221);
   font-size: 16.5px;
   padding: 12px 24px 12px 0px;
 }
 
 .top_companies_description span {
   color: #c0c4fc;
-}
-
+} 
+ 
 .company_logo img {
   margin: 12px 24px 12px 0px;
 }
 
 .company_logo {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
 }
 
 .certificates_skills {
@@ -917,6 +920,22 @@ footer {
   color: rgb(255, 255, 255);
 }
 
+.certificates_dropdown{
+  display: none;
+  padding: 8px 0px 16px; 
+}
+
+.certificates_drop{
+  display: block;
+}
+ 
+.certificates_dropdown_list{
+  padding: 4px 0px; 
+  font-size: 14px;
+  line-height: 27.59px;
+  font-family: U-reg;
+}
+
 .second_section {
   background: rgb(17, 17, 22);
 }
@@ -939,11 +958,11 @@ footer {
   color: rgb(255, 255, 255);
   margin-bottom: 24px;
   font-size: 14px;
-
-}
+} 
 
 .last_section_list li {
-  padding-bottom: 4px;
+  padding-bottom: 4px; 
+  line-height: 19.59px;
 }
 
 .copyright_section {
@@ -1000,8 +1019,9 @@ footer {
 }
 
 .header_tab {
-  display: none;
+  display: none; 
 }
+
 
 @media screen and (min-width:553px) {
   .last_section {
@@ -1013,21 +1033,19 @@ footer {
   .last_section_list {
     width: 100%;
   }
+  
 }
 
 @media screen and (min-width:601px) {
   .courses_lists {
     gap: 16px;
   }
-
+ 
   .courses {
     padding: 48px 24px;
   }
 
-  .results {
-    font-size: 22.4px;
-    line-height: 27.2px;
-  }
+ 
 
   .course_img {
     width: 242px;
@@ -1085,6 +1103,44 @@ footer {
   }
 }
 
+@media screen and (min-width:701px){
+  .certificates_dropdown{
+    display: block;
+  }
+  .certificates_skills_list svg{
+    display: none;
+  }
+  .certificates_skills_lists{
+    border: 0px;
+  }
+  .certificates_skills_lists_main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+  .certificates_skills_lists{
+    display: flex;
+    flex-direction: column;
+    width: 21%;
+  }
+  .certificates_dropdown_list{
+    line-height: 19.6px;
+  }
+  .copyright_section_main{
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .certificates_dropdown_list{
+    padding: 0px 0px 4px 0px;
+  }
+  .copyright{
+    padding: 0px;
+  }
+}
+
 @media screen and (min-width:801px) {
   .header_mobile {
     display: none;
@@ -1103,7 +1159,7 @@ footer {
   .header_tab_logo img {
     width: 91px;
   }
-
+ 
   .header_tab_logo {
     padding-right: 8px;
     margin-top: 4px;
@@ -1111,11 +1167,69 @@ footer {
   }
 
   .header_tab_explore {
+    cursor: pointer;
     font-size: 14px;
     font-family: U-reg;
     line-height: 19.59px;
     margin: 12px 0px;
     padding: 0px 12px;
+  }
+
+
+  .explore_dropdrown{
+    display: none;
+    width: 260px;
+    height: 640px;
+    position: absolute;
+    background: white;
+    box-shadow: rgba(6, 17, 118, 0.08) 0px 2px 4px 0px;
+    z-index: 1111;
+    margin-top: 30px;
+    border-radius: 8px;
+  }
+  .explore_drop{
+    display: block;
+  }
+  .browse_certification{
+    padding: 16px 16px 0px;
+    font-size: 14px;
+    font-family: U-bold;
+    color: rgb(89, 92, 115);
+  }
+  .certificate_preparation{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-family: U-reg;
+    line-height: 19.59px;
+    padding: 16px;
+    color: rgb(48, 49, 65);
+  }
+
+  .certificate_preparation img{
+    width: 16px;
+    height: 19.69px;
+    margin-left: 8px;
+  } 
+
+  .explore_dropdown_list{
+    border-top: 1px solid rgb(209, 210, 224);
+    padding: 8px 0px;
+  }
+
+  .explore_dropdown_list_items{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+    font-size: 14px;
+    line-height: 19.59px;
+    color: rgb(48, 49, 65);
+  }
+
+  .explore_dropdown_list_items img{
+    width: 16px;
+    height: 19.69px;
+    margin-left: 8px;
   }
 
   .header_search_bar_main {
@@ -1146,6 +1260,7 @@ footer {
   }
 
   .header_tab_mylearning {
+    cursor: pointer;
     font-size: 14px;
     font-family: U-reg;
     line-height: 19.59px;
@@ -1154,9 +1269,41 @@ footer {
   }
 
   .header_tab_cart {
+    cursor: pointer;
     display: flex;
     margin: 12px 0px;
     padding: 0px 12px;
+  }
+
+  .cart_dropdown{ 
+    padding: 16px;
+    width: 288px;
+    height: 89.98px;
+    background: white;
+    position: absolute;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(6, 17, 118, 0.08),
+    0 4px 12px rgba(6, 17, 118, 0.08);
+    border-radius: 8px;
+    margin-top: 55px;
+    margin-left: -250px;
+    display: none;
+  }
+
+  .cart_dropdown span{
+    font-size: 16px;
+    font-family: U-reg;
+    margin-bottom: 16px;
+  }
+
+  .cart_dropdown p{
+    font-size: 14px;
+    font-family: U-bold;
+    color: rgb(109, 40, 210);
+  }
+
+  .cart_drop{
+    display: block;
   }
 
   .profile_dp_tab {
@@ -1170,26 +1317,194 @@ footer {
     width: 32px;
     height: 32px;
     margin: 8px;
-    border-radius: 100px;
+    border-radius: 100px;   
   }
 
   .profile_dp_tab_main {
+    cursor: pointer;
     margin: 12px 0px;
     padding: 0px 4px;
   }
+ 
+  .profile_dropdown{
+    display: none;
+    position: absolute;
+    z-index: 1111;
+    margin-top: 20px; 
+    margin-left: -240px;
+    width: 260px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(6, 17, 118, 0.08),
+    0 4px 12px rgba(6, 17, 118, 0.08);
+  }
   
-  .header_tab_notification {
-    height: 24px;
-    margin: 12px 0px;
-    padding: 0px 12px;
+  .profile_drop{
+    display: block;
+  } 
+
+  .profile_dp_section{
+    padding: 16px;
+  }
+  .profile_pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 100px;
+    background: black;
+    color: white;
+    font-family: U-bold;
+    font-size: 28px;
+  }
+  .user_details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 8px;
+  }
+   
+  .user_details span{
+    font-size: 16px;
+    font-family: U-bold;
+  }
+  .user_details p{
+    font-size: 14px;
+    font-family: U-reg;
+    margin-top: 4px;
   }
 
+  .profile_dp_section{
+    display: flex;
+  }
+
+  .profile_content{
+    font-size: 14px; 
+    font-family: U-reg;
+    line-height: 19.59px;
+    padding: 8px 0px;
+    border-top: 1px solid rgb(209, 210, 224);
+  }
+  .profile_content_items{
+    padding: 8px 16px;
+  }
+  .profile_dropdown_last_part{
+    padding: 16px;
+    display: flex;
+    gap: 8px;
+    border-top: 1px solid rgb(209, 210, 224);
+  }
+  .profile_dropdown_last_part_inner span{
+    font-size: 16px;
+    font-family: U-bold;
+    line-height: 19.19px;
+  }
+  .profile_dropdown_last_part_inner p{
+    margin-top: 4px;
+    font-size: 14px;
+    font-family: U-reg;
+    color: rgb(89, 92, 115);
+    line-height: 19.19px;
+  }
+  .profile_dropdown_last_part img{
+    height: 24px;
+    width: 24px;
+  }
+  .header_tab_notification {
+    cursor: pointer;
+    height: 24px;
+    margin: 12px 0px;
+    padding: 0px 12px;
+  } 
+  .notification_dropdown{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    width: 361px;
+    height: 107px;
+    background: white;
+    position: absolute;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(6, 17, 118, 0.08),
+    0 4px 12px rgba(6, 17, 118, 0.08);
+    border-radius: 8px;
+    margin-top: 30px;
+    margin-left: -330px;
+    display: none;
+  } 
+
+  .notification_drop{
+    display: block;
+  } 
+      
+  .notification_contents{
+    display: flex;
+    justify-content: space-between;
+  }
+  .notification_contents span{
+    font-size: 16px;
+    font-family: U-bold;
+    margin-bottom: 16px;
+  }
+   
+  .notification_contents p{
+    font-size: 14px;
+    font-family: U-bold;
+    color: rgb(109, 40, 210);
+    font-weight: 700;
+  }
+  .notification_dropdown p{
+    font-size: 14px;
+    font-family: U-reg;
+  }
+
+
+
   .header_tab_wishlist {
+    cursor: pointer;
     height: 24px;
     margin: 12px 0px;
     padding: 0px 12px;
   }
+  .wishlist_dropdown{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    width: 288px;
+    height: 89.98px;
+    background: white;
+    position: absolute;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(6, 17, 118, 0.08),
+    0 4px 12px rgba(6, 17, 118, 0.08);
+    border-radius: 8px;
+    margin-top: 30px;
+    margin-left: -250px;
+    display: none;
+  }
+
+  .wishlist_drop{
+    display: block;
+  }
+      
+    
+  .wishlist_dropdown span{
+    font-size: 16px;
+    font-family: U-reg;
+    margin-bottom: 16px;
+  }
+
+  .wishlist_dropdown p{
+    font-size: 14px;
+    font-family: U-bold;
+    color: rgb(109, 40, 210);
+  }
+
   .header_tab_teach{
+    cursor: pointer;
     font-size: 14px;
     font-family: U-reg;
     line-height: 19.59px;
@@ -1197,6 +1512,7 @@ footer {
     padding: 0px 12px;
   }
   .header_tab_bussiness{
+    cursor: pointer;
     font-size: 14px;
     font-family: U-reg;
     line-height: 19.59px;
@@ -1258,5 +1574,123 @@ footer {
     font-size: 17px; 
     font-family: U-bold;
   }
+  .learning_dropdown{
+    margin-left: -196px;
+    display: none;
+    width: 288px;
+    padding: 16px;
+    background: white;
+    position: absolute;
+    box-shadow: 0 2px 4px rgba(6, 17, 118, 0.08),
+    0 4px 12px rgba(6, 17, 118, 0.08);
+    border-radius: 8px;
+    margin-top: 30px;
+  }
+  .learning_dropdown p{
+    text-align: center; 
+    margin-bottom: 16px;
+    font-size: 17px; 
+    font-family: U-bold;
+  }
+  .learning_button{
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    justify-content: center;
+    font-family: U-bold;
+    color: rgb(109, 40, 210);
+    width: 100%;
+    height: 48px;
+    border: 1px solid rgb(109, 40, 210);
+    border-radius: 4px;
+  }
+  .learn_drop{
+    display: block;
+  }
  
 }  
+@media screen and (min-width:981px) {
+  .filter_bar{
+    display: block;
+    width: 0px;
+    position: relative;
+    background: white;
+    left: 0;
+    justify-content: start;
+    flex: 1;
+    z-index: 0;
+    max-width: 311px; 
+  }
+  
+  .filter_bar_inner{ 
+    width: 100%;
+    max-width: 100%; 
+  } 
+  .home_tabview{ 
+    display: flex;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .filter_menu_close_btn{
+    display: none;
+  }
+  .course_section_main{
+    width: 74.5%;
+    transition: all 0.3s ease-in-out; 
+  }
+  .course_section_full{
+    width: 100%;
+    margin-left: -16px;
+  }
+  .fiterbar_head{
+    display: none;
+  }
+  .filterbar_main{
+    margin: 0px;
+  }
+  .teach_online{
+    padding: 16px 32px;
+  }
+  .top_companies{
+    padding: 16px 32px;
+
+  }
+  .certificates_skills{
+    padding: 24px 32px 0px;
+  }
+  .last_section{
+    padding: 24px 32px 0px;
+
+  }
+ 
+  .copyright_section{
+    padding: 0px 32px;
+  }
+
+}
+
+@media screen and (min-width:1016px) {
+  .top_companies{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width:1201px) {
+  .teach_online{
+    padding: 16px 48px;
+  }
+  .top_companies{
+    padding: 12px 48px;
+  }
+  .certificates_skills{
+    padding: 24px 48px 0px;
+  }
+  .last_section{
+    padding: 24px 48px 0px;
+  }
+  .copyright_section{
+    padding: 0px 48px;
+  }
+
+}
