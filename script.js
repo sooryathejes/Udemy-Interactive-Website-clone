@@ -7,8 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let fltrCloseBtn = document.querySelector('.filter_menu_close_btn');
     let ratingDropdown = document.querySelector('.ratings_dropdown_btn');
     let languageDropdown = document.querySelector('.languages_dropdown_btn');
+    let priceDropdown = document.querySelector('.price_dropdown_btn');
+
     let ratingList = document.querySelector('.rating_lists')
     let languageLists = document.querySelector('.language_lists')
+    let priceLists = document.querySelector('.price_lists')
     let notificationIcon = document.querySelector('.header_tab_notification');
     let cartIcon = document.querySelector('.header_tab_cart')
     let wishlistIcon = document.querySelector('.header_tab_wishlist');
@@ -29,8 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let exploreDropdown = document.querySelector('.explore_dropdrown')
     let sortSection = document.querySelector('.sort_section');
     let skillLists = document.querySelectorAll('.certificates_skills_lists')
+    let dropDownIcons = document.querySelectorAll(".dropdown_icon")
 
-
+    dropDownIcons.forEach((icon) => {
+        icon.addEventListener('click',() => {
+        icon.classList.toggle('rotate')
+    })
+    })
+    
     skillLists.forEach((list) => {
         let skillList = list.querySelector('.certificates_skills_list');
         let dropdown = list.querySelector('.certificates_dropdown')
@@ -39,8 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     
     })
-
-   
 
     function ratings(courses) {
         return courses.sort((a, b) => b.rating - a.rating);
@@ -175,6 +182,10 @@ document.addEventListener('DOMContentLoaded', () => {
         languageLists.classList.toggle('drop')
     })
 
+    priceDropdown.addEventListener('click', () => {
+        priceLists.classList.toggle('drop')
+    })
+
 
     closeBtn.addEventListener('click', () => {
         sideBar.classList.remove("active");
@@ -219,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="author">${course.instructor}</p>
                     <div class="rating">
                         <div class="rating_text">${course.rating}</div>
-                        ${course.stars}
+                         <img src="${course.stars}" alt="">
                         <div class="reviews">${course.reviews}</div>
                     </div>
                     <div class="about_course">
@@ -245,6 +256,24 @@ document.addEventListener('DOMContentLoaded', () => {
     let engLang = document.querySelector(".engLang");
     let spaLang = document.querySelector(".spaLang");
     let frLang = document.querySelector(".frLang");
+    let paidCourses = document.querySelector(".paid_courses") ;
+    let freeCourses = document.querySelector(".free_courses")
+
+    function filterFree(){
+        let filteredCourses = courseData.filter(course => {
+            let feeValue = course.price;
+            return feeValue === "Free"
+        })
+        displayCourses(filteredCourses)
+    }
+
+    function filterPaid(){
+        let filteredCourses = courseData.filter(course => {
+            let paidValue = course.price
+            return paidValue != "Free"
+        })
+        displayCourses(filteredCourses) 
+    }
 
     function ratingFourHalf() {
         let filteredCourses = courseData.filter(course => {
@@ -319,16 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
     engLang.addEventListener("click", languageEng);
     spaLang.addEventListener("click", languageSpa);
     frLang.addEventListener("click", languageFr);
-
-
-    // -----sorting-------
-    // let highestRated = document.querySelector('.highest_rated')
-
-    // function mostReviews(courses){
-    //     return courses.sort((a,b) => parseFloat(b.rating) - parseFloat(a.rating))
-    // }
-    // highestRated.addEventListener('click',() => {
-    //         displayCourses(mostReviews(courseData))
-    // })
+    freeCourses.addEventListener("click", filterFree);
+    paidCourses.addEventListener("click",filterPaid)
 
 });

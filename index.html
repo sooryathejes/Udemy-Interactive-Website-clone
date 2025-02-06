@@ -607,8 +607,8 @@
                 <div class="filterbar_rating">
                   <p>Ratings</p>
                   <div class="ratings_dropdown_btn">
-                    <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true" focusable="false"
+                    <svg class="dropdown_icon" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
                       class="ud-icon ud-icon-small ud-icon-color-neutral accordion-panel-module--expand-icon--knJ5Q"
                       width="24" height="24">
                       <defs>
@@ -625,60 +625,92 @@
                 <div class="rating_lists">
                   <div class="rating_list">
                     <input type="radio" class="upfourhalf" name="rating">
-                    <div class="filter_stars">*****</div>
+                    <div class="filter_stars"><img src="./img/4.5.svg" alt=""></div>
                     <div class="filter_rating_texts">4.5 & up</div>
                     <div class="filter_reviews">(10,000)</div>
                   </div>
                   <div class="rating_list">
                     <input type="radio" class="upfour" name="rating">
-                    <div class="filter_stars">*****</div>
+                    <div class="filter_stars"><img src="./img/4star.svg" alt=""></div>
                     <div class="filter_rating_texts">4.0 & up</div>
                     <div class="filter_reviews">(10,000)</div>
                   </div>
                   <div class="rating_list">
                     <input type="radio" class="upthreehalf" name="rating">
-                    <div class="filter_stars">*****</div>
+                    <div class="filter_stars"><img src="./img/3.5star.svg" alt=""></div>
                     <div class="filter_rating_texts">3.5 & up</div>
                     <div class="filter_reviews">(10,000)</div>
                   </div>
                   <div class="rating_list">
                     <input type="radio" class="upthree" name="rating">
-                    <div class="filter_stars">*****</div>
+                    <div class="filter_stars"><img src="./img/3star.svg" alt=""></div>
                     <div class="filter_rating_texts">3.0 & up</div>
                     <div class="filter_reviews">(10,000)</div>
                   </div>
                 </div>
               </div>
-              <div class="filter_laguage">
-                <p>Language</p>
-                <div class="languages_dropdown_btn">
-                  <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-                    focusable="false"
-                    class="ud-icon ud-icon-small ud-icon-color-neutral accordion-panel-module--expand-icon--knJ5Q"
-                    width="24" height="24">
-                    <defs>
-                      <symbol id="icon-expand" viewBox="0 0 24 24">
+              <div class="language_main">
+                <div class="filter_laguage">
+                  <p>Language</p>
+                  <div class="languages_dropdown_btn">
+                    <svg class="dropdown_icon" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                      class="ud-icon ud-icon-small ud-icon-color-neutral accordion-panel-module--expand-icon--knJ5Q"
+                      width="24" height="24">
+                      <defs>
+                        <symbol id="icon-expand" viewBox="0 0 24 24">
+                          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"></path>
+                        </symbol>
+                      </defs>
+                      <g>
                         <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"></path>
-                      </symbol>
-                    </defs>
-                    <g>
-                      <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"></path>
-                    </g>
-                  </svg>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+                <div class="language_lists">
+                  <div class="language_list">
+                    <input type="checkbox" name="lang" class="engLang">
+                    English
+                  </div>
+                  <div class="language_list">
+                    <input type="checkbox" name="lang" class="spaLang">
+                    Spanish
+                  </div>
+                  <div class="language_list">
+                    <input type="checkbox" name="lang" class="frLang">
+                    French
+                  </div>
                 </div>
               </div>
-              <div class="language_lists">
-                <div class="language_list">
-                  <input type="checkbox" name="lang" class="engLang">
-                  English
+              <div class="price_main">
+                <div class="filter_price">
+                  <p>Price</p>
+                  <div class="price_dropdown_btn">
+                    <svg class="dropdown_icon" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                      class="ud-icon ud-icon-small ud-icon-color-neutral accordion-panel-module--expand-icon--knJ5Q"
+                      width="24" height="24">
+                      <defs>
+                        <symbol id="icon-expand" viewBox="0 0 24 24">
+                          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"></path>
+                        </symbol>
+                      </defs>
+                      <g>
+                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"></path>
+                      </g>
+                    </svg>
+                  </div>
                 </div>
-                <div class="language_list">
-                  <input type="checkbox" name="lang" class="spaLang">
-                  Spanish
-                </div>
-                <div class="language_list">
-                  <input type="checkbox" name="lang" class="frLang">
-                  French
+                <div class="price_lists">
+                  <div class="language_list">
+                    <input type="checkbox" name="lang" class="paid_courses">
+                    Paid
+                  </div>
+                  <div class="language_list">
+                    <input type="checkbox" name="lang" class="free_courses">
+                    Free
+                  </div>
                 </div>
               </div>
             </div>
@@ -1079,20 +1111,20 @@
           Teach on Udemy
         </div>
       </div>
-    <div class="top_companies">
-      <div class="top_companies_description">
-        Top companies choose <span>Udemy Business</span> to build in-demand career skills.
-      </div>
-      <div class="top_companies_logos">
-        <div class="company_logo">
-          <img src="./img/nasdaq-light.svg" alt="">
-          <img src="./img/volkswagen-light.svg" alt="">
-          <img src="./img/box-light.svg" alt="">
-          <img src="./img/netapp-light.svg" alt="">
-          <img src="./img/eventbrite-light.svg" alt="">
+      <div class="top_companies">
+        <div class="top_companies_description">
+          Top companies choose <span>Udemy Business</span> to build in-demand career skills.
+        </div>
+        <div class="top_companies_logos">
+          <div class="company_logo">
+            <img src="./img/nasdaq-light.svg" alt="">
+            <img src="./img/volkswagen-light.svg" alt="">
+            <img src="./img/box-light.svg" alt="">
+            <img src="./img/netapp-light.svg" alt="">
+            <img src="./img/eventbrite-light.svg" alt="">
+          </div>
         </div>
       </div>
-    </div>
       <div class="certificates_skills">
         <div class="certificates_skills_head">
           Explore to skills and certification
@@ -1100,9 +1132,9 @@
         <div class="certificates_skills_lists_main">
           <div class="certificates_skills_lists">
             <p class="certificates_skills_list">
-              Certifications by Issuer<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" focusable="false" class="ud-icon ud-icon-xsmall show-more-module--show-more--ObEu7"
-                width="20" height="20">
+              Certifications by Issuer<svg class="dropdown_icon" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                class="ud-icon ud-icon-xsmall show-more-module--show-more--ObEu7" width="20" height="20">
                 <defs>
                   <symbol id="icon-expand" viewBox="0 0 24 24">
                     <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" fill="white"></path>
@@ -1136,9 +1168,9 @@
           </div>
           <div class="certificates_skills_lists">
             <p class="certificates_skills_list">
-              Certification by Skill<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" focusable="false" class="ud-icon ud-icon-xsmall show-more-module--show-more--ObEu7"
-                width="20" height="20">
+              Certification by Skill<svg class="dropdown_icon" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                class="ud-icon ud-icon-xsmall show-more-module--show-more--ObEu7" width="20" height="20">
                 <defs>
                   <symbol id="icon-expand" viewBox="0 0 24 24">
                     <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" fill="white"></path>
@@ -1173,9 +1205,9 @@
           </div>
           <div class="certificates_skills_lists">
             <p class="certificates_skills_list">
-              Web Development<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" focusable="false" class="ud-icon ud-icon-xsmall show-more-module--show-more--ObEu7"
-                width="20" height="20">
+              Web Development<svg class="dropdown_icon" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                class="ud-icon ud-icon-xsmall show-more-module--show-more--ObEu7" width="20" height="20">
                 <defs>
                   <symbol id="icon-expand" viewBox="0 0 24 24">
                     <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" fill="white"></path>
@@ -1206,9 +1238,9 @@
           </div>
           <div class="certificates_skills_lists">
             <p class="certificates_skills_list">
-              IT Certifications<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" focusable="false" class="ud-icon ud-icon-xsmall show-more-module--show-more--ObEu7"
-                width="20" height="20">
+              IT Certifications<svg class="dropdown_icon" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                class="ud-icon ud-icon-xsmall show-more-module--show-more--ObEu7" width="20" height="20">
                 <defs>
                   <symbol id="icon-expand" viewBox="0 0 24 24">
                     <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" fill="white"></path>
@@ -1239,9 +1271,9 @@
           </div>
           <div class="certificates_skills_lists">
             <p class="certificates_skills_list">
-              Leadership<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" focusable="false" class="ud-icon ud-icon-xsmall show-more-module--show-more--ObEu7"
-                width="20" height="20">
+              Leadership<svg class="dropdown_icon" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                class="ud-icon ud-icon-xsmall show-more-module--show-more--ObEu7" width="20" height="20">
                 <defs>
                   <symbol id="icon-expand" viewBox="0 0 24 24">
                     <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" fill="white"></path>
@@ -1272,9 +1304,9 @@
           </div>
           <div class="certificates_skills_lists">
             <p class="certificates_skills_list">
-              Data Science<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" focusable="false" class="ud-icon ud-icon-xsmall show-more-module--show-more--ObEu7"
-                width="20" height="20">
+              Data Science<svg class="dropdown_icon" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                class="ud-icon ud-icon-xsmall show-more-module--show-more--ObEu7" width="20" height="20">
                 <defs>
                   <symbol id="icon-expand" viewBox="0 0 24 24">
                     <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" fill="white"></path>
@@ -1305,9 +1337,9 @@
           </div>
           <div class="certificates_skills_lists">
             <p class="certificates_skills_list">
-              Communication<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true" focusable="false" class="ud-icon ud-icon-xsmall show-more-module--show-more--ObEu7"
-                width="20" height="20">
+              Communication<svg class="dropdown_icon" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
+                class="ud-icon ud-icon-xsmall show-more-module--show-more--ObEu7" width="20" height="20">
                 <defs>
                   <symbol id="icon-expand" viewBox="0 0 24 24">
                     <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" fill="white"></path>
@@ -1338,7 +1370,7 @@
           </div>
           <div class="certificates_skills_lists">
             <p class="certificates_skills_list">
-              Business Analytics & Intelligence<svg xmlns:xlink="http://www.w3.org/1999/xlink"
+              Business Analytics & Intelligence<svg class="dropdown_icon" xmlns:xlink="http://www.w3.org/1999/xlink"
                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
                 class="ud-icon ud-icon-xsmall show-more-module--show-more--ObEu7" width="20" height="20">
                 <defs>

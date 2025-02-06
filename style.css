@@ -417,6 +417,20 @@ main {
   font-family: U-bold;
   font-size: 16.5px;
   padding: 16px 0px;
+  border-bottom: 1px solid rgb(145, 148, 172);
+
+}
+
+.filter_price{
+  display: flex;
+  justify-content: space-between;
+  font-family: U-bold;
+  font-size: 16.5px;
+  padding: 16px 0px;
+  
+}
+.price_lists{
+  display: none;
 }
 
 .language_lists {
@@ -949,35 +963,35 @@ footer {
   font-size: 16px;
   margin: 16px 0px;
   font-family: U-bold;
-  color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255); 
 }
 
 .last_section_list ul {
   list-style: none;
   font-family: U-reg;
   color: rgb(255, 255, 255);
-  margin-bottom: 24px;
-  font-size: 14px;
-} 
-
+  margin-bottom: 24px;  
+  font-size: 14px; 
+}      
+     
 .last_section_list li {
-  padding-bottom: 4px; 
+  padding-bottom: 4px;
   line-height: 19.59px;
 }
-
-.copyright_section {
+ 
+.copyright_section { 
   padding: 0px 24px;
-}
-
+} 
+ 
 .copyright_section_main {
-  display: flex;
+  display: flex; 
   flex-direction: column;
   gap: 24px;
-  padding: 24px 0px;
-}
-
+  padding: 24px 0px; 
+} 
+ 
 .laguages {
-  display: flex;
+  display: flex; 
   align-items: center;
   font-size: 16px;
   font-family: U-reg;
@@ -1015,12 +1029,16 @@ footer {
 }
 
 .coure_discrip {
-  display: none;
+  display: none; 
 }
 
 .header_tab {
-  display: none; 
+  display: none;
 }
+.rotate{
+  transform: rotate(180deg);
+  transition: 0.1s ease-in-out;
+} 
 
 
 @media screen and (min-width:553px) {
@@ -1030,9 +1048,9 @@ footer {
     justify-content: space-between;
   }
 
-  .last_section_list {
-    width: 100%;
-  }
+  .last_section_list { 
+    width: 100%; 
+  } 
   
 }
 
@@ -1045,10 +1063,8 @@ footer {
     padding: 48px 24px;
   }
 
- 
-
   .course_img {
-    width: 242px;
+    width: 242px; 
     height: 137px;
   }
 
@@ -1172,7 +1188,12 @@ footer {
     font-family: U-reg;
     line-height: 19.59px;
     margin: 12px 0px;
-    padding: 0px 12px;
+    padding: 12px 12px;
+    border-radius: 3px;
+  }
+  .header_tab_explore:hover {
+    background: #ede5f9;
+    color: rgb(109, 40, 210);
   }
 
 
@@ -1265,7 +1286,12 @@ footer {
     font-family: U-reg;
     line-height: 19.59px;
     margin: 12px 0px;
-    padding: 0px 12px;
+    padding: 12px 12px;
+  }
+
+  .header_tab_mylearning:hover{
+    background: #ede5f9;
+    border-radius: 3px;
   }
 
   .header_tab_cart {
@@ -1454,22 +1480,26 @@ footer {
     font-family: U-bold;
     color: rgb(109, 40, 210);
     font-weight: 700;
-  }
+  } 
   .notification_dropdown p{
     font-size: 14px;
     font-family: U-reg;
   }
-
-
-
+ 
   .header_tab_wishlist {
     cursor: pointer;
     height: 24px;
     margin: 12px 0px;
     padding: 0px 12px;
   }
+   
+  .header_tab_wishlist:hover{
+    background: #ede5f9;
+    border-radius: 3px;
+  } 
+  
   .wishlist_dropdown{
-    display: flex;
+    display: flex; 
     flex-direction: column;
     justify-content: space-between;
     padding: 16px;
@@ -1484,7 +1514,7 @@ footer {
     margin-top: 30px;
     margin-left: -250px;
     display: none;
-  }
+  } 
 
   .wishlist_drop{
     display: block;
@@ -1509,16 +1539,27 @@ footer {
     font-family: U-reg;
     line-height: 19.59px;
     margin: 12px 0px;
-    padding: 0px 12px;
+    padding: 12px 12px;
   }
+  .header_tab_teach:hover{
+    border-radius: 3px;
+    background: #ede5f9;
+  }
+
   .header_tab_bussiness{
     cursor: pointer;
     font-size: 14px;
     font-family: U-reg;
     line-height: 19.59px;
     margin: 12px 0px;
-    padding: 0px 12px;
+    padding: 12px 12px;
   }
+
+  .header_tab_bussiness:hover{
+    background: #ede5f9;
+    border-radius: 3px;
+  }
+
   .bussiness_dropdown{
     margin-left: -153px;
     display: none;
@@ -1531,15 +1572,18 @@ footer {
     border-radius: 8px;
     margin-top: 30px;
   }
+
   .bussiness_drop{
     display: block;
   }
+
   .bussiness_dropdown p{
     text-align: center; 
     margin-bottom: 16px;
     font-size: 17px; 
     font-family: U-bold;
   }
+
   .bussiness_button{
     display: flex;
     align-items: center;
