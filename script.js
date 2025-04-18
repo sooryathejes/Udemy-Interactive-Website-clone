@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let ratingDropdown = document.querySelector('.ratings_dropdown_btn');
     let languageDropdown = document.querySelector('.languages_dropdown_btn');
     let priceDropdown = document.querySelector('.price_dropdown_btn');
-
+    let levelDropdown = document.querySelector('.level_dropdown_btn');
+    let levelList = document.querySelector('.level_lists')
     let ratingList = document.querySelector('.rating_lists')
     let languageLists = document.querySelector('.language_lists')
     let priceLists = document.querySelector('.price_lists')
@@ -186,6 +187,10 @@ document.addEventListener('DOMContentLoaded', () => {
         priceLists.classList.toggle('drop')
     })
 
+    levelDropdown.addEventListener('click', () => {
+        levelList.classList.toggle('drop')
+    })
+
 
     closeBtn.addEventListener('click', () => {
         sideBar.classList.remove("active");
@@ -258,6 +263,43 @@ document.addEventListener('DOMContentLoaded', () => {
     let frLang = document.querySelector(".frLang");
     let paidCourses = document.querySelector(".paid_courses") ;
     let freeCourses = document.querySelector(".free_courses")
+    let allLevel = document.querySelector('.all_level')
+    let beginnerLevel = document.querySelector('.beginner_level')
+    let intermediateLevel = document.querySelector('.intermediate_level')
+    let expertLevel = document.querySelector('.Expert_level')
+
+    function filterAll(){
+        let filteredCourses = courseData.filter(course => {
+            let levelValue = course.levels;
+            return levelValue === "All levels"
+        })
+        displayCourses(filteredCourses)
+    }
+
+    function filterBeginner(){
+        let filteredCourses = courseData.filter(course => {
+            let levelValue = course.levels;
+            return levelValue === "Beginner"
+        })
+        displayCourses(filteredCourses)
+    }
+
+    function filterIntermediate(){
+        let filteredCourses = courseData.filter(course => {
+            let levelValue = course.levels;
+            return levelValue === "Intermediate"
+        })
+        displayCourses(filteredCourses)
+    }
+
+    function filterExpert(){
+        let filteredCourses = courseData.filter(course => {
+            let levelValue = course.levels;
+            return levelValue === "Expert"
+        })
+        displayCourses(filteredCourses)
+    }
+
 
     function filterFree(){
         let filteredCourses = courseData.filter(course => {
@@ -329,7 +371,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let isFrFilter = false;
-
     function languageFr() {
         let filteredCourses;
         if (isFrFilter) {
@@ -340,7 +381,11 @@ document.addEventListener('DOMContentLoaded', () => {
         displayCourses(filteredCourses);
         isFrFilter = !isFrFilter;
     };
-
+    
+    allLevel.addEventListener("click", filterAll);
+    beginnerLevel.addEventListener("click", filterBeginner);
+    intermediateLevel.addEventListener("click", filterIntermediate);
+    expertLevel.addEventListener("click", filterExpert);
     upfourhalf.addEventListener("click", ratingFourHalf);
     upfour.addEventListener("click", ratingFour);
     upthreehalf.addEventListener("click", ratingThreeHalf);

@@ -9,7 +9,7 @@
         "reviews":"(384,713)",
         "time":"56.5 total hours",
         "lectures":"592 lectures",
-        "levels":"All levels",
+        "levels":"Expert",
         "price":"Free",
         "language":"Spanish"
 
@@ -23,12 +23,12 @@
         "reviews":"(527,971)",
         "time":"22 total hours",
         "lectures":"156 lectures",
-        "levels":"All levels",
+        "levels":"All levels", 
         "price":"449",
-        "language":"English"
-        
-    },
-    {
+        "language":"English"  
+ 
+    }, 
+    { 
         "img" : "https://img-c.udemycdn.com/course/240x135/4398404_2f8f_2.jpg",
         "course":"Learn Python Programming - Beginner to Master",
         "instructor":"Abdul Bari",
@@ -37,11 +37,11 @@
         "reviews":"(7,288)",
         "time":"57 total hours",
         "lectures":"352 lectures",
-        "levels":"All levels",
+        "levels":"Intermediate", 
         "price":"Free",
         "language":"English"
 
-    },
+    }, 
     {
         "img" : "https://img-c.udemycdn.com/course/240x135/6120747_5232_2.jpg",
         "course":"Complete Python With DSA Bootcamp + LEETCODE Exercises",
@@ -65,7 +65,7 @@
         "reviews":"(1,5600)",
         "time":"52.5 total hours",
         "lectures":"459 lectures",
-        "levels":"All levels",
+        "levels":"Intermediate",
         "price":"699",
         "language":"Spanish"
 
@@ -93,7 +93,7 @@
         "reviews":"(1,5600)",
         "time":"4.5 total hours",
         "lectures":"112 lectures",
-        "levels":"Beginner",
+        "levels":"Beginner", 
         "price":"599",
         "language":"Spanish"
 
@@ -121,7 +121,7 @@
         "reviews":"(1,463)",
         "time":"21.5 total hours",
         "lectures":"250 lectures",
-        "levels":"All levels",
+        "levels":"Expert",
         "price":"499",
         "language":"English"
 

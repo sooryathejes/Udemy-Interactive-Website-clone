@@ -410,6 +410,10 @@ main {
 .language_list input {
   margin-right: 8px;
 }
+.language_main{
+  border-bottom: 1px solid rgb(145, 148, 172);
+
+}
 
 .filter_laguage {
   display: flex;
@@ -417,6 +421,9 @@ main {
   font-family: U-bold;
   font-size: 16.5px;
   padding: 16px 0px;
+}
+
+.price_main{
   border-bottom: 1px solid rgb(145, 148, 172);
 
 }
@@ -429,6 +436,14 @@ main {
   padding: 16px 0px;
   
 }
+.filter_level{
+  display: flex;
+  justify-content: space-between;
+  font-family: U-bold;
+  font-size: 16.5px;
+  padding: 16px 0px;
+}
+
 .price_lists{
   display: none;
 }
@@ -437,10 +452,14 @@ main {
   display: none;
 }
 
+.level_lists{
+  display: none;
+}
+
 .drop {
   display: block;
 }
-
+ 
 /* ---------header---------------- */
 
 .header_mobile {
@@ -467,7 +486,7 @@ main {
 .spacer {
   width: 48px;
   height: 48px;
-}
+} 
 
 .udemy_logo {
   display: flex;
@@ -553,22 +572,35 @@ main {
 }
 
 .sort_section {
-  cursor: pointer;
+  cursor: pointer;  
   display: flex;
+  align-items: center;
   flex-direction: column;
-  width: 100%;
-  background: white;
-  height: 62px;
-  border: 1px solid rgb(145, 148, 172);
-  border-radius: 4px;
   margin: 0px 4px;
-  padding: 20px 16px 0px;
+  padding: 20px 16px 0px; 
   max-width: 178px;
+  border: 0;
+  background: white;
 }
 
-.most_relevant {
+.sort_section_main{
+  display: flex;
+  background: white;
+  border: 1px solid rgb(145, 148, 172);
+  height: 62px; 
+  border-radius: 4px;  
+}
+
+.sort_section_main label{
+  position: absolute;
+  font-size: 12px;
+  margin-left: 22px;
+  font-family: U-bold;
+}
+    
+.most_relevant { 
   font-size: 16px;
-  font-family: U-reg;
+  font-family: U-reg; 
 }
 
 .sort_by {
@@ -604,7 +636,7 @@ main {
   height: 66px;
   object-fit: cover;
 }
-
+ 
 .course_contents {
   width: 100%;
 }
@@ -615,7 +647,7 @@ main {
   width: 100%;
   font-size: 16px;
   font-family: U-bold;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 2; 
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1736,5 +1768,4 @@ footer {
   .copyright_section{
     padding: 0px 48px;
   }
-
 }
